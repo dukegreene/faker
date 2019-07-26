@@ -2,6 +2,16 @@
 
 module Faker
   module Creature
+    class Wally < Base
+      flexible :wally
+
+      class << self
+        def nickname
+          fetch('creature.wally.nickname')
+        end
+      end
+    end
+
     class Dog < Base
       flexible :dog
 
